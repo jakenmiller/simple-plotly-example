@@ -1,0 +1,22 @@
+---
+title: "Plotly Example"
+author: "Jacob Miller"
+date: "June 27, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+```
+
+## Plotly Example With ToothGrowth Dataset 
+
+- Previously in the Coursera Data Science specialization an analysis was performed of the Guinea Pig tooth growth data set
+- The interactive plotly graph on the following slide would assist in the exploratory data analysis stage
+- The graph demonstrates the lack of difference between the two vitamin C delivery methods at high doseages
+
+## Plotly Graph
+```{r Graph, echo = FALSE}
+plot_ly(data = ToothGrowth, y = ~len, x= ~dose, color = ~supp, type = "box")
+```
